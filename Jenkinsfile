@@ -3,13 +3,13 @@ pipeline {
   stages {
     stage('stage1') {
       steps {
-        sh '''sh "date"
-sh "mkdir F1"
+        sh '''sh date
+sh mkdir F1
 '''
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         sh 'sh grep -c \'^username:\' /etc/passwd'
       }
