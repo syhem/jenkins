@@ -18,7 +18,7 @@ pipeline {
       steps {
         sh '''if test `grep -c formation /etc/passwd` -ne 0
 then 
-find /home/formation -user orsys  > /tmp/formation
+find /home/formation -user formation  > /tmp/formation
 fi
 '''
       }
