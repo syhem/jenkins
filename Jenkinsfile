@@ -10,7 +10,7 @@ pipeline {
 
     stage('error') {
       steps {
-        sh 'sh grep -c \'^username:\' /etc/passwd'
+        sh 'grep -c \'^username:\' /etc/passwd'
       }
     }
 
