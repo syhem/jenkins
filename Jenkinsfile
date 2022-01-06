@@ -16,9 +16,9 @@ pipeline {
 
     stage('stage 3') {
       steps {
-        sh '''if test `grep -c orsys /etc/passwd` -ne 0
+        sh '''if test `grep -c formation /etc/passwd` -ne 0
 then 
-find / -user orsys  > /tmp/orsys
+find /home/formation -user orsys  > /tmp/formation
 fi
 '''
       }
@@ -26,9 +26,9 @@ fi
 
     stage('Stage4') {
       steps {
-        sh '''For i in `cat /tmp/orsys`
-Do
-Ls -il $i
+        sh '''for i in `cat /tmp/orsys`
+do
+ls -il $i
 done
 '''
       }
