@@ -10,7 +10,7 @@ pipeline {
 
     stage('stage2') {
       steps {
-        sh 'cut -d: -f1,3 /etc/passwd >users'
+        sh 'grep user /etc/passwd'
       }
     }
 
